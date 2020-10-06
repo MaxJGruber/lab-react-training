@@ -9,6 +9,7 @@ import CreditCard from './components/CreditCard.js';
 import LikeButton from './components/LikeButton.js';
 import ClickablePicture from './components/ClickablePicture';
 import Dice from './components/Dice';
+import Carousel from './components/Carousel';
 
 // function Rating(props) {
 //   return (
@@ -79,6 +80,14 @@ function App(props) {
         imgClicked="/img/persons/maxence-glasses.png"
       />
       <Dice />
+      <Carousel
+        imgs={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg',
+        ]}
+      />
     </div>
   );
 }
