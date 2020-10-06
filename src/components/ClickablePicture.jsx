@@ -2,19 +2,24 @@ import React from 'react';
 
 class ClickablePicture extends React.Component {
   state = {
-    img: this.props.img,
+    clicked: false,
   };
 
   nextPicture = () => {
     this.setState({
-      img: this.props.imgClicked,
+      clicked: !this.state.clicked,
     });
   };
 
   render() {
     return (
       <div className="Picture">
-        <img src={this.state.img} onClick={this.nextPicture} alt="" />
+        {!this.state.clicked && (
+          <img src={this.props.img} onClick={this.nextPicture} alt="" />
+        )}
+        {this.state.clicked && (
+          <img src={this.props.imgClicked} onClick={this.nextPicture} alt="" />
+        )}
       </div>
     );
   }

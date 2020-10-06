@@ -18,13 +18,22 @@ class Dice extends React.Component {
   pictureClicked = () => {
     this.setState({
       picture: './img/dice-empty.png',
-      clicked: true,
+      clicked: !this.state.clicked,
     });
   };
   render() {
     return (
       <div className="Dice">
-        <img src={this.state.picture} onClick={this.pictureClicked} alt="" />
+        {this.state.clicked && (
+          <img src={this.state.picture} onClick={this.pictureClicked} alt="" />
+        )}
+        {!this.state.clicked && (
+          <img
+            src={picArr[Math.floor(Math.random() * picArr.length) + 1]}
+            onClick={this.pictureClicked}
+            alt=""
+          />
+        )}
       </div>
     );
   }
