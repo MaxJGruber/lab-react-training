@@ -39,3 +39,18 @@ code {
   padding: 3px;
   margin: 2%;
 }
+
+.Button button {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-direction: row;
+  width: 5%;
+  padding: 3px;
+  margin: 2%;
+}
+
+.Dice img {
+  width: 200px;
+}
