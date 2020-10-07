@@ -10,6 +10,7 @@ import LikeButton from './components/LikeButton.js';
 import ClickablePicture from './components/ClickablePicture';
 import Dice from './components/Dice';
 import Carousel from './components/Carousel';
+import FaceBook from './components/FaceBook';
 
 // function Rating(props) {
 //   return (
@@ -88,6 +89,7 @@ function App(props) {
           'https://randomuser.me/api/portraits/men/2.jpg',
         ]}
       />
+      <FaceBook />
     </div>
   );
 }
